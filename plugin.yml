@@ -1,0 +1,12 @@
+name: CatanPlugin
+main: Catan.CatanPlugin
+version: 1.0
+api-version: 1.13
+commands:
+  catan:
+   description: catan play
+   permission: catan.play
+   permissions:
+     catan.play
+   permission-message: You need catan.play in your groups permissions to execute that.
+   usage: "Usage: /catan play"
