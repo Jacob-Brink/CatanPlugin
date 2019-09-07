@@ -48,14 +48,14 @@ public class HexagonTile {
 	}
 	
 	public void debug() {
-		World world = Bukkit.getServer().getWorld("world");
+		World world = CatanPlugin.catanWorld;
 		Location l = new Location(world, cX, 184, cZ);
 		l.getBlock().setType(Material.GOLD_BLOCK);
 		
 	}
 	
 	public void debugChange() {
-		World world = Bukkit.getServer().getWorld("world");
+		World world = CatanPlugin.catanWorld;
 		Location l = new Location(world, cX, 184, cZ);
 		l.getBlock().setType(Material.COAL_BLOCK);
 	}

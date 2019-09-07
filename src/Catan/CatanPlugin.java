@@ -38,16 +38,16 @@ public class CatanPlugin extends JavaPlugin {
 	public static HashMap<Structures, HashMap<ResourceType, Integer>> structureToPrice = new HashMap<>();
 	public static String CatanPrefix = "" + ChatColor.AQUA + ChatColor.BOLD + "CATAN: ";
 	public static Location gameLobby, gameSpawn, hubSpawn, waitingRoom;
-	
+	public static World catanWorld, spawnWorld;
 	private static CatanPlugin instance;
-	private static int minPlayers = 1; //for debugging purposes only
+	private static int minPlayers = 2; //for debugging purposes only
 	
 	private static void setupLocations() {
-		World catanWorld = Bukkit.createWorld(new WorldCreator("catan"));
-		World spawnWorld = Bukkit.createWorld(new WorldCreator("VoidWorld"));
+		catanWorld = Bukkit.createWorld(new WorldCreator("catan"));
+		spawnWorld = Bukkit.createWorld(new WorldCreator("world"));
 		gameLobby = new Location(catanWorld, -84, 239, -647);
 		gameSpawn = new Location(catanWorld, -83, 192, -643);
-		hubSpawn = new Location(spawnWorld, 6, 4, 8);
+		hubSpawn = new Location(spawnWorld, 8, 20, 8);
 		waitingRoom = new Location(catanWorld, -159, 160, -344);
 	}
 	

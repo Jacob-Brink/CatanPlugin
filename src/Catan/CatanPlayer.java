@@ -27,7 +27,7 @@ public class CatanPlayer {
 	private Color color;
 	private Player player;
 	private GameBoard gb;
-	private Location spawnLocation;
+	private Location spawnLocation = CatanPlugin.gameSpawn;
 	private ScoreManager.ScoreboardHook scoreHook;
 	
 	public ItemStack setCustomName(ItemStack item, String name) {
@@ -183,7 +183,7 @@ public class CatanPlayer {
 		if (spawnLocation != null) {
 			player.teleport(spawnLocation);
 		} else {
-			Location l = new Location(Bukkit.getWorld("world"), -82, 192, -642);
+			Location l = new Location(CatanPlugin.catanWorld, -82, 192, -642);
 			player.teleport(l);
 		}
 		resetInventory();

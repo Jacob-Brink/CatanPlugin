@@ -91,7 +91,7 @@ public class Node {
 			player.sendError("You cannot place a settlement closer than two roads away from another structure");
 			return false;
 		}
-		Location l = new Location(Bukkit.getWorld("world"), coordX, CatanPlugin.boardHeight, coordZ);
+		Location l = new Location(CatanPlugin.catanWorld, coordX, CatanPlugin.boardHeight, coordZ);
 		structure = new Structure(player, l);
 		increaseHexCollectingRate(player.getUUID());
 		return true;
@@ -117,7 +117,7 @@ public class Node {
 	}
 	
 	public void debug() {
-		World world = Bukkit.getServer().getWorld("world");
+		World world = CatanPlugin.catanWorld;
 		Location l = new Location(world, coordX, 184, coordZ);
 		l.getBlock().setType(Material.DIAMOND_BLOCK);
 		
